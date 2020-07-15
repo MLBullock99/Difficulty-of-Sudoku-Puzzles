@@ -1,0 +1,10 @@
+https://www.diva-portal.org/smash/get/diva2:812097/FULLTEXT01.pdf
+
+- A program which aims to imitate how humans would solve a sudoku
+  - Humans typically choose most obvious step rather than the most useful
+  - Normally, more obvious steps are those that use simpler strategies
+- Only uses the 4 simplest strategies, so wont be able to solve more complex sudokus
+- Scoring system based off how many times the program has to switch strategies
+  - Chose coefficients to make score similar to that of human test data
+- If the program can't solve the sudoku, it determines score based off what proportion of the grid is empty at the end
+- States main issue was small sample size of human test data
