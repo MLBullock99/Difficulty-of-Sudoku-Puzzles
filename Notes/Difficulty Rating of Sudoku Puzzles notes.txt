@@ -1,0 +1,19 @@
+https://www.fi.muni.cz/~xpelanek/publications/sudoku-arxiv.pdf
+
+- Sudoku puzzle can be viewed as a Constraint Satisfaction Problem
+- Also can be viewed as a special case of a graph colouring problem
+  - Puzzle is finding a 9-colouring given the initial assignment
+
+- Approaches for solving sudokus:
+  - Backtracking:
+    - Basic approach to solving CSPs
+    - 'Trial and Error', doesn't represent how humans solve
+    - Exponential time complexity, but 9x9 puzzles can be solved easily
+  - Constraint Propagation:
+    - For each square, define candidate set as values that don't directly break constraints
+    - Not guaranteed to find a solution
+    - May more efficient than backtracking
+    - Natural way humans solve sudokus
+
+- Use mean solution time as a measure of difficulty for humans
+  - Noted high correlation between mean and median in data set
