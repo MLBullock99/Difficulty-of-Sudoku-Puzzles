@@ -17,3 +17,28 @@ https://www.fi.muni.cz/~xpelanek/publications/sudoku-arxiv.pdf
 
 - Use mean solution time as a measure of difficulty for humans
   - Noted high correlation between mean and median in data set
+
+- Model repeatedly:
+  - Chooses simplest technique for current state that gives a result
+  - Choose one of the actions that this technique can perform
+  - Apply this action to give the new state
+- Assumes solver doesn't make mistakes and progress is always possible with logic
+- If an unknown technique is needed, trial and error is used to show which values are inconsistent
+  - This uses breadth first search on a tree of possible actions
+  - Sum of the depths is the refutation score
+- Best correlation for medium difficulty puzzles
+
+- Different metrics for evaluation:
+  - Serate Metric:
+    - Maximal difficulty technique used
+  - Serate LM Metric:
+    - Compute how many times each technique is used
+    - Compute linear model with parameters generated from test data
+  - Fowler's Metric:
+    - Metric used by G. Fowler's tool
+    - Complicated expression based on number of uses of each technique
+  - Refutation Sum Metric:
+    - Mean sum of refutation scores over a number of randomized runs
+
+- Number of possibilities also affects difficulty
+  - Computes the mean number of possibilities over first k steps
