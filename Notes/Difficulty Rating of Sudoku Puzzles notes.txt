@@ -42,3 +42,20 @@ https://www.fi.muni.cz/~xpelanek/publications/sudoku-arxiv.pdf
 
 - Number of possibilities also affects difficulty
   - Computes the mean number of possibilities over first k steps
+
+- Can generate sudoku graph
+  - Vertices are squares
+  - Edges if two squares can't have the same number
+  - Problem is to find a 9-colouring of this graph
+- Easy puzzles have more redundancy with connections, as they have more ways to the solution
+- Randomly remove k edges from the sudoku graph
+  - Might lose unique solution
+  - If there still is a unique solution, then the puzzle has redundancy, so is easier
+- Mean number of solutions grow exponentially with k
+  - roughly c.exp(k/6), where c depends on the puzzle and is between 0.02 and 0.2
+- Probability of a unique solution decreases nearly linearly with k
+- Can also count number of fixed cells, cells with the same variable in each puzzle with k constraints removed
+  - The number of fixed cells declines with k more slowly for easy problems
+  - Fixedness of a cell is probability that a cell is fixed with k random constraints removed
+  - Fixedness can be used to predict order of cell filling
+    - Higher fixedness are filled earlier
