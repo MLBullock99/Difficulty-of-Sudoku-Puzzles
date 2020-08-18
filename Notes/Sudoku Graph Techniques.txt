@@ -1,0 +1,15 @@
+The difficulty rating of each technique is as stated in http://www.sudokuoftheday.com/techniques/
+
+This file is how each technique translates to colouring a sudoku graph
+
+Easy Techniques:
+Single Position:
+- Each node is in 3 cliques (row, column, box)
+- To colour a node colour A:
+  - Every other node in one of these cliques:
+    - Either has been coloured not A
+    - Or is adjacent to a node coloured A
+
+Single Candidate:
+- To colour a node colour A:
+  - There is a node of every colour apart from A adjacent to this cell
