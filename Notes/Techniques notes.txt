@@ -1,4 +1,0 @@
-http://www.sudokuoftheday.com/techniques/
-
-- Lists techniques used to solve sudokus and their difficulty levels
-- Contains tips on how to find patterns that correspond to each technique easier 
